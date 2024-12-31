@@ -1,0 +1,122 @@
+.hero {
+    background: linear-gradient(135deg, #121420, #1a1c2d); /* Slight gradient effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 50px;
+    color: #f0f6fc;
+}
+
+.hero-content {
+    max-width: 45%; /* Reduce width for better focus */
+    margin-right: 50px; /* Add space between text and image */
+}
+
+.hero-intro {
+    font-size: 1.3rem;
+    color: #f39c12;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #ffffff;
+    text-align: left;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #c9d1d9;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    padding: 12px 32px;
+    background-color: #f39c12;
+    color: #161b22;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-button:hover {
+    background-color: #e68a00;
+    transform: scale(1.05); /* Add subtle scaling effect */
+}
+
+.hero-image-container {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 80%;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for better focus */
+    /* box-shadow: horizontal-offset vertical-offset blur-radius spread-radius color;*/
+    /* rgba(0, 0, 0, 0.4) means the shadow is black (rgb(0, 0, 0)) with 40% opacity (alpha = 0.4), making it slightly transparent.*/
+    transition: transform 0.3s ease, filter 0.3s ease; 
+    /* transition will occur upon below hover*/
+}
+
+.hero-image:hover {
+    transform: scale(1.08);
+}
+
+/* Responsive Design */
+/* Updated Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse; /* Change to a vertical stack */
+        text-align: center; /* Center all content */
+        padding: 20px; /* Add inner spacing */
+    }
+
+    .hero-content {
+        margin: 10px auto; /* Center content */
+        max-width: 90%; /* Constrain text width */
+    }
+
+    .hero-intro {
+        font-size: 1.2rem; /* Slightly reduce size */
+        margin-top: 5px;
+        color: #f39c12;
+    }
+
+    .hero-title {
+        font-size: 2.5rem; /* Adjust size for better readability */
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hero-description {
+        font-size: 1rem; /* Smaller text for smaller screens */
+        line-height: 1.5; /* Adjust spacing */
+        color: #c9d1d9;
+    }
+
+    .hero-button {
+        padding: 10px 24px;
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .hero-image-container {
+        margin-bottom: 15px; /* Add space below image */
+    }
+
+    .hero-image {
+        width: 80%; /* Slightly smaller */
+        max-width: 250px; /* Fixed size for smaller screens */
+    }
+}
+

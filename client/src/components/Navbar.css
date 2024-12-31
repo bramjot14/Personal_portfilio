@@ -1,0 +1,119 @@
+/* Reset and Base Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Blur Background Content */
+/* .blur {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+} */
+
+
+.logoText {
+  color: orange!important;
+}
+
+.navStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+  z-index: 1000;
+}
+
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menuToggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+.navListStyle {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.linkStyle {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem; 
+  margin-right: 1.5rem;
+}
+
+
+.linkStyle:hover {
+  color: orange;
+}
+
+.menuContainer {
+  display: flex; /* Default to flex for proper alignment */
+  justify-content: space-between; /* Ensure space-between applies */
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap if needed */
+  gap: 1rem; /* Add consistent spacing between child elements */
+  width: 100%; /* Ensure it spans the full width */
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+
+  .menuToggle {
+    display: block; /* Show toggle button */
+  }
+
+  .menuContainer {
+    display: none; /* Hide menus by default */
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .menuContainer.open {
+    display: flex; /* Show menus when toggle is active */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    padding: 1rem;
+  }
+ 
+
+  .navListStyle {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navListStyle li {
+    margin: 1rem 0; /* Add spacing between items */
+  }
+}
+
+
+/* In .navListStyle.open, position absolute is behaving with respect to position relative which is set in .navStyle*/
+/* The default flex-direction is row, meaning the child elements (in this case, list items) are laid out horizontally in a row.*/
+/* The position: absolute property is used to remove an element from the normal document flow and position it relative to its nearest positioned ancestor (an ancestor with a position of relative, absolute, or fixed). If no such ancestor exists, the element is positioned relative to the viewport (the browser window).*/
+/* The showMenu class in your code is a custom class, and you can define its behavior in your CSS. It is dynamically applied to the navigation menu (ul.navListStyle) based on the isMenuOpen state in your React code. This allows you to control when the navigation menu is visible and how it behaves when toggled.*/
+
